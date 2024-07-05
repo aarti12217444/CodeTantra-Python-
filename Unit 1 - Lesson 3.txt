@@ -1,0 +1,40 @@
+3.1.1. Understanding Variables
+# In the below line, assign value 18 to the length variable
+
+length = 18
+
+# In the below line, assign value "King Cobra" to the snake variable
+
+snake = "King Cobra"
+
+print(snake, "can grow up to a length of", length, "feet")
+3.1.2. Assigning Different Values to Variables
+value1 = value2 = value3 = "Hello"
+print(value1)
+print(value2)
+print(value3)
+# Assign values to variables and print again
+value1 = 99
+value2 = "Hello Python"
+value3 = "Hello World"
+print(value1)
+print(value2)
+print(value3)
+3.1.3. Assignment of Variables
+kilometers = int(input("Enter a value: ")) # assign the correct value
+convertfactor = 0.621371 # assign the correct value
+miles =  (kilometers) * (convertfactor)# multiply kilometers and convertfactor
+print("Miles:", miles)
+3.1.4. Understanding Multiple Assignment
+age,length,language = 25, 24.789, "Python"# Assign the values to the variables
+print(age)
+print(length)
+print(language)
+3.1.5. Chained Assignment
+str1 = input("Enter a value: ")
+
+# Assign str1 to three objects a, b and c
+a = b = c = str1
+print("Value of a:", a ) # Print a
+print("Value of b:", b ) # Print b
+print("Value of c:", c ) # Print c

@@ -1,0 +1,34 @@
+1.1.1. What is a computer programming language?
+(b) The sequence of instructions (in the form of source code) written in a computer programming language is called a computer program.
+
+1.1.2. The genesis of Python
+(c) The Python programming language evolved through many versions.
+
+1.1.3. Python Program Life Cycle
+(b) Python source code is written and saved in a file with .py extension.
+
+1.1.4. Difference between Compiler and Interpreter
+(b) Compiler takes entire block of code as a single unit to check and identify the errors in program
+
+1.1.5. High level language categories
+(b) XML is an example of markup programming language.
+(c) Scripting languages are used to automate frequently executing tasks.
+(e) Functional programming language uses conditional expressions and recursion to perform computations
+
+1.1.6. Identify the Error
+print("Python is Easy")
+
+1.1.7. Identify the Error
+print("Python is not Typhoon")
+
+1.1.8. Other usages of print function) n = int(input()
+# write your code here to print the given word n time
+print("Abracadabra" * n)
+
+1.1.9. Fill in the missing code
+print("wh" "ere", "the" "re", "is", "a", "will,", "th" "ere", "is", "a", "way")
+
+1.1.10. Features of Python
+(a) Python is an interpreted language.
+(b) A Python program can execute C and C++ programs also.
+(d) A Python program written on Windows operating system will also execute on Linux operating system as it is portable.

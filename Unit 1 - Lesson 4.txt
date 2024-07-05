@@ -1,0 +1,32 @@
+4.1.1. Understanding Expressions
+number1 = 20.50
+number2 = 38.25
+# Print the multiplication of number1 and number2 using * operator.
+print(number1 * number2)
+string1 = "Amazon"
+string2 = "River"
+# Print the concatenated value of string1 and string2 using + operator.
+print(string1 + string2)
+4.1.2. Understanding Statements - Print statements
+(a) In Python, Statements are executed by Interpreter.
+(c) The association of a value to a variable is called as Binding.
+(e) a = b + a * b is a valid statement in Python.
+4.1.3. Types of Assignment Statements
+message = "Welcome to Python"
+# print message
+print(message)
+number = int(input())
+# add 5 to the number
+number = number + 5
+# print number
+print(number)
+4.1.4. Augmented Assignment Statement
+(b) We can perform assignment with '=' operator.
+(c) a -= b and a = a-b are gives same result.
+4.2.1. What is an Indentation
+if 100.0 > 10.0:
+	print("Small Value:", 10.0)	
+else:
+	print("Large Value:", 100.0)
+4.2.2. A simple program in Python
+print("Hello Python")

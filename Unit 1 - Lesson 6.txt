@@ -1,0 +1,84 @@
+6.1.1. Understanding List Creation
+value1 = input("Enter the first value: ")
+value2 = input("Enter the second value: ")
+value3 = input("Enter the third value: ")
+list1 =  [value1, value2, value3]# create llist one with above three variables
+
+#print the list1
+print("List1:", list1)
+value4 = input("Enter the first value: ")
+value5 = input("Enter the second value: ")
+value6 = input("Enter the third value: ")
+list2 = [value4, value5, value6]# create llist one with above three variables
+
+
+#print the list2
+print("List2:",list2)
+#Concatenate list1 and list2 and print the result
+
+print("List after Concatenation:",list1 + list2)
+6.1.2. Accessing items in a List
+value1 = input("Enter the first value: ")
+value2 = input("Enter the second value: ")
+value3 = input("Enter the third value: ")
+
+list1 = [value1,  value2, value3] # create list1
+
+# print every element in list1 using index
+print(list1[0])
+print(list1[1])
+print(list1[2])
+list1[2] = "Python"
+
+# print list1
+print(list1)
+# add "Code is Life" to list1
+list1.append("Code is Life")
+# print list1
+print(list1)
+
+value4 = input("Enter the first value: ")
+value5 = input("Enter the second value: ")
+value6 = input("Enter the third value: ")
+
+list2 = [value4, value5, value6]# create list2
+
+# Extend list1 with the elements from list2
+list1.extend(list2)
+# print list1
+print(list1)
+6.2.1. Introduction to Set
+(c) A set is represented using curly braces { } .
+6.3.1. Introduction to Tuple
+(c) tuples are immutable.
+(e) Converting a tuple into a list and list into tuple is possible.
+6.3.2. Accessing elements in tuples
+value1 = input("first value: ")
+value2 = input("second value: ")
+value3 = input("third value: ")
+value4 = input("fourth value: ")
+value5 = input("fifth value: ")
+mytuple = (value1, value2, value3, value4, value5) # create tuple with the above 5 inputs
+print(mytuple)
+# Print value at index 0
+print(mytuple[0])
+# Print value at index 1
+print(mytuple[1])
+# Print value at index -1
+print(mytuple[-1])
+# Print all the values from index 0
+print(mytuple)
+# Print all the values except the last value
+print(mytuple[:-1])
+print(mytuple[::-1])
+6.3.3. Converting a tuple into a list and a list into a tuple
+mytuple = ("i", "love", "python")
+
+#Write the missing code here
+print("Given Tuple:", mytuple)
+mylist= list(mytuple)
+print("After Converting Tuple into List:", mylist)
+mylist[1] = 'practice'
+print("List after changing element:", mylist)
+tuple1= tuple(mylist)
+print("After Converting List into Tuple:", tuple1)

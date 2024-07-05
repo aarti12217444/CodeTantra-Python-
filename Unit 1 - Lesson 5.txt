@@ -1,0 +1,16 @@
+5.1.1. Understanding Types of Data Types
+(a) In Python, we need not specify the data type of the variable.
+(d) type() function in Python is used to know which datatype of value the variable
+5.2.1. Numbers
+a = 365
+#Print type of a
+print(type(a))
+a = 345.65
+#Print type of a
+print(type(a))
+
+a = 45 + 5j
+#Print type of a
+print(type(a))
+5.3.1. String data type
+(c) Encoding means converting strings of characters into numbers.

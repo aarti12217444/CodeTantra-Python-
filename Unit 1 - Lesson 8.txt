@@ -1,0 +1,36 @@
+8.1.1. Reading input in Python - strings
+place = input("Enter your favourite place: ")#take your favourite place using input statement
+
+# Print your favourite place
+print("My favourite place is:",place)
+8.1.2. Understanding Output in Python.
+lang = input("Enter Language: ")
+print("My Favourite Language is", lang)
+8.1.3. % - formatting and str.format() function
+# Take an integer input from the user and store it in variable "a"
+a = int(input("a: "))
+# Take an integer input from the user and store it in variable "b"
+b = int(input("b: "))
+# print "a" value at 0 index and "b" value at 1 index
+# print by changing the index postions of "a" and "b" and observe the output
+print("The value of a = %d, b = %d " %(a,b))
+print("The value of a = %d, b = %d " %(b,a))
+8.1.4. % - formatting and str.format() function
+# take float number from the user
+a= float(input("a: "))
+# print up to 2 decimal points
+print(f"{a:.2f}")
+# print up to 6 decimal points
+print(f"{a:.6f}")
+# take int number from the user
+b= int(input("Enter b value: "))
+# print the number with one space
+print(f"{b}")
+# print the number with two spaces
+print(f"{b:2}")
+# print the number with three spaces
+print(f"{b:3}")
+# print the given number b in octal form
+print(f"octal: {oct(b)[2:]}")
+# print the given input b in hexadecimal form
+print(f"hex:", hex(b).upper()[2:])
