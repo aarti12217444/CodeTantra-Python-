@@ -1,0 +1,38 @@
+28.1.1. Fruitful functions - an overview
+(a) A fruitful function is a function, it returns a value when it is called.
+(b) A return statement consists of the return keyword followed by an expression.
+(c) Python returns immediately when it reaches a return statement .
+
+
+
+28.1.2. A simple fruitful function
+def largestinthree(a, b, c):
+	if a>b and a>c:
+		return a
+	elif b>c:
+		return b
+	else:
+		return c
+	# write your code here to find the largest number in a, b and c
+		
+num1 = int(input("Please enter a value for num1: "))
+num2 = int(input("Please enter a value for num2: "))
+num3 = int(input("Please enter a value for num3: "))
+
+result = largestinthree(num1, num2, num3)
+
+print("Largest of the values entered is", result)
+
+
+28.1.3. Write a program to find gcd of two given numbers.
+
+def computeGCD(x, y):
+	while y:
+		x,y=y,x%y
+	return x
+#write your code here..
+
+
+a = int(input("x: "))
+b = int(input("y: "))
+print (computeGCD(a, b))

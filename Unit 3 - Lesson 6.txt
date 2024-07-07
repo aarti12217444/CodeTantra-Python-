@@ -1,0 +1,105 @@
+29.1.1. Local variables - an overview
+def test1():
+	a=50
+	b=80
+	print(a,b)
+#complete the function
+
+def test2():
+	a=22
+	b=44
+	print(a,b)
+#complete the function
+
+test1()
+test2()
+
+
+
+
+29.1.2. Global variable
+globvar = input()
+
+def test1():
+	global globvar
+	#declare the global variable as "globvar" and return it.
+	return(globvar)
+def test2():
+	
+	global globvar
+	globvar = "Good Morning" 
+	return(globvar)
+	#return the globvar
+
+print(test1())
+print(test2())
+
+
+
+
+
+
+29.1.3. Writing a local and Global variables example
+#Program to illustrate Global and Local Variables
+a = int(input("a: "))
+
+def changeglobal():
+	global a
+	#declare varibale "a" as global
+	a=200
+	#Assign a value 200 to the varibale a
+def changelocal():
+	a=500
+	#Assign a value 500 to the varibale a
+	
+	print("local a value:", a)
+
+print("global a before function call:", a)
+changeglobal()
+changelocal()
+print("global a after function call:", a)
+
+
+
+
+
+29.2.1. Function composition - an overview
+def square(x):
+	# find square of a given number and return the result
+	return x**2
+
+def double(x):
+	return x*2
+
+	# double the given number and return the result
+
+num = int(input("num: "))
+
+print("double, squaring the value:", square(double(num)))
+
+
+
+
+29.2.2. Writing a function composition example
+def compose (*functions):  
+	def inner(arg):
+		for f in functions:
+			arg=f(arg)
+		return arg
+	return inner
+
+def square (x):
+	return(x**2)
+
+def increment (x):
+	return x+1
+	
+def half (x):
+	return x/2
+
+x=int(input())
+composed = compose(square, increment, half)
+print(composed(x))
+
+composed = compose(square, increment)
+print(composed(x))

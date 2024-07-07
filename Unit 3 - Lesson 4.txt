@@ -1,0 +1,41 @@
+27.1.1. Introduction to Lambda Function
+(a) Anonymous functions are also called lambda functions.
+(b) Lambda functions can be used anywhere we need a regular function objects.
+(d) The expression is evaluated first and a value is returned.
+
+
+27.1.2. Simple lambda example
+tax = lambda salary: salary*20/100# write the expression here
+	
+salary = int(input("Please enter your salary: "))
+print("Tax to be paid is", tax(salary))
+
+
+
+27.1.3. Writing an example for Anonymous function
+doublenum = lambda a: a*2
+
+#complete the code..
+a = int(input("a: "))
+print(doublenum(a))
+
+
+
+
+27.1.4. Understanding map function
+def squares(x):
+	return x**2
+#fill in the missing code..
+list1 = list(map(int,input().split(",")))
+
+
+print(list(list(map(squares,list1))))
+
+
+
+27.1.5. Understanding Filter function
+a = list(map(int,input().split(",")))
+
+#fill in the missing code
+
+print(list(filter(lambda x: x%2==0, a)))

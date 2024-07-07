@@ -1,0 +1,97 @@
+25.1.1. Parameters/Arguments
+(a) An argument is an expression which is passed to a function by its caller, in order for the function to perform its task.
+(b) Parameters are local to the particular function.
+(c) Parameters are available only with in the specified function
+
+
+
+25.1.2. Writing a simple function with arguments
+d = int(input("a: "))
+e = int(input("b: "))
+
+def add(a,b):
+	#perform addition on the passed parameters
+	x = a+b
+	#return the result
+	return(x)
+
+x =add(d,e) #call the add() by passing d and e arguments
+
+print(x)
+
+
+
+25.1.3. A simple function with a single argument
+def sayhello(n):
+	x = "Hello"
+	print(x, n)
+#write your code here..
+name= input("")
+sayhello(name)
+
+
+
+25.1.4. Write a program to print a pascal triangle using functions
+
+def pascal(n):
+	for i in range(1,n+1):
+		c=1
+		list1=[]
+		for j in range(1,i+1):
+			list1.append(c)
+			c=c*(i-j)//j
+		print(list1)
+
+#write your code here..
+
+i = int(input("num: "))
+pascal(i)
+
+
+
+
+25.2.1. Keyword arguments - an overview
+(a) When values are provided as arguments to a function using their respective parameter names, allowing assignment in any order, these arguments are called as keyword arguments.
+(b) Calling the function add(a = 10, b = 20) or by add(10, 20), produce the same result.
+
+
+
+
+25.2.2. Writing an example using keyword arguments
+def simplecalc(a, b):
+	print(a+b)
+	print(a-b)
+	print(a*b)
+#fill in the missing code..
+
+a = int(input())
+b = int(input())
+
+simplecalc(a,b)
+simplecalc(a=b,b=a)
+
+
+
+
+25.2.3. Writing an example for keyword arguments
+def saysomething(name, message):
+	print("Good", message, name)
+#write ypur code here..
+n= input("name: ")
+m= input("morning/night: ")
+saysomething(n,m )
+saysomething(message=m,name=n)
+
+
+
+
+25.2.4. Illustration of Keyword arguments
+def nameage(*, name, age):
+	print(name, age)
+#fill in the miising code..
+
+name = input("name: ")
+age = int(input("age: "))
+
+nameage( age= age, name= name )
+nameage( name=name, age=age )
