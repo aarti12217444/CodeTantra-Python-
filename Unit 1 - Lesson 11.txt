@@ -1,0 +1,91 @@
+11.1.1. Logical Operators - An overview
+(b) In logical and the result is true if the both operands are true.
+
+
+11.1.2. Logical Operators - An overview
+a= input("M or F: ")
+b= int(input("age: "))
+if(a == "M" and b >= 65):
+	print("Eligible for Concession")
+elif(a == "F" and b >= 60):
+	print("Eligible for Concession")
+else:
+	print("Not Eligible for Concession")
+
+
+11.1.3. Writing a program using logical "and"
+# write your code here
+a= int(input("a: "))
+b= int(input("b: "))
+c= int(input("c: "))
+
+if (a == 6 and b == 6 and c != 6): #write the condition
+	print('True')
+else:
+	print('False')
+11.1.4. Using Logical "or"
+a = int(input("a: "))
+b = int(input("b: "))
+
+#write your code here
+if(a == 6 or b == 6 or a+b == 6 or a-b == 6):
+	print("True")
+else:
+	print("False")
+
+
+11.1.5. Using Logical "not"
+# Program to illustrate logical not
+a= input("Enter day: ")
+
+if(a == "SAT" or a == "SUN"):
+	print("Weekend")
+else:
+	print("Not Weekend")
+
+
+11.2.1. The membership operators
+(a) in and not in operators check the existence of a member in a collection.
+(c) if in operator returns False, not in operator will return True.
+(e) An empty string is part of every other string.
+11.2.2. Membership Operators - an Overview
+a = input("str1: ")
+b = input("str2: ")
+
+if(b in a):
+	print(b, "in", a, ": True")
+else:
+	print(b, "in", a, ": False")
+
+
+11.2.3. Writing example using Membership operator in
+#Program to illustrate in and not in for strings
+a = input("str1: ")
+b = input("str2: ")
+if(b in a):
+	print(b, "in", a, "is: True")
+else:
+	print(b, "in", a, "is: False")
+	
+if(b not in a):
+	print(b, "not in", a, "is: True")
+else:
+	print(b, "not in", a, "is: False")
+
+
+11.2.4. Write an example using Membership operator not in
+# Program to illustrate membership operators
+L1 = ['A', '123', 'Ramana', [1, 2], 34.56, '55']
+# for 34.56 returns False as output because, the input() takes the input as string.
+print(L1)
+A= input("element: ")
+# write your code here
+if A in L1:
+	print(f"{A} in {L1} is: True")
+else:
+	print(f"{A} in {L1} is: False")
+	
+if (A not in L1):
+	print(f"{A} not in {L1} is: True")
+else:
+	print(f"{A} not in {L1} is: False")

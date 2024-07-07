@@ -1,0 +1,93 @@
+12.1.1. Identity Operators - An overview
+(c) id(object) is unique and Constant for an object during its lifetime.
+
+
+12.1.2. Identity Operators - An overview
+x = int(input("Enter an integer: "))
+y = int(input("Enter the same integer: "))
+
+#use identity operators and write the code
+if x is y:
+	print(f"x is y True")
+else:
+	print("x is y False")
+
+
+if x is not y:
+	print(f"x is not y True")
+else:
+	print("x is not y False")
+
+x = float(input("Enter a Float Number: "))
+y = float(input("Enter the same Number: "))
+
+#use identity operators and write the code
+if x is y:
+	print("x is y True")
+	print("x is not y False")
+else:
+	print("x is y False")
+	print("x is not y True")
+
+
+
+12.1.3. Writing using Identity "is"
+#write your code here..
+x = int(input("x: "))
+y = int(input("y: "))
+if x is y:
+	print(f"{x} is {y} True")
+else:
+	print(f"{x} is {y} False")
+
+
+
+(12.1.4. Writing an example using identity operator "is not")
+x = int(input("x: "))
+y = int(input("y: "))
+
+if x is not y:
+	print(f"{x} is not {y} True")
+else:
+	print(f"{x} is not {y} False")
+
+
+12.2.1. Operator Precedence & Associativity - definitions
+(a) Operator precedence is performed based on priority of an operator.
+(b) Associativity is used when two operators of same precedence are in the same expression.
+
+
+12.2.2. Operator Precedence
+(b) 4
+
+
+12.2.3. Operator Precedence
+a = int(input("a: "))
+b = int(input("b: "))
+
+print(f"{a} + {b} * 5 = {a+b*5}")
+print(f"{a} + {b} * 6 / 2 = {a+b*6/2}")
+
+
+12.2.4. Writing an example on operator precedence
+a = int(input("a: "))
+b = int(input("b: "))
+print(f"{a} + {b} * 5 = {a+b*5}")
+print(f"{a} + {b} * 5 * 10 / 2 = {a+b*5*10/2}")
+
+
+12.2.5. Using operator precedence on Logical operators
+a = int(input("a: "))
+b = int(input("b: "))
+c = int(input("c: "))
+print("a and b or c", a and b  or c)
+print("a or b and c", a or b and c)
+
+
+
+12.2.6. Using Operator Precedence on Logical Operators
+a = int(input("a: "))
+b = int(input("b: "))
+c = int(input("c: "))
+print(f"{a} and {b} and {c} or {a} is {a and b and c or a}")
+print(f"{a} or {b} and {c} and {a} is {a or b and c and a}")

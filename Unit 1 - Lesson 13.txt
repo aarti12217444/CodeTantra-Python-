@@ -1,0 +1,19 @@
+13.1.1. Introduction To Numbers
+# find quotient using '/' and '//' and remainder using '%'
+#like (a/b) and (a//b) and (a%b)
+
+a = int(input("a: "))
+b = int(input("b: "))
+print(f"{a} / {b} = {a/b}")
+print(f"{a} // {b} = {a//b}")
+print(f"{a} % {b} = {a%b}")
+
+
+
+13.1.2. Write a program to addition, subtraction and multiplication and division of two complex numbers.
+c1 = complex(input("c1: "))
+c2 = complex(input("c2: "))
+print("a1 + b2 =", c1+c2)
+print("a1 - b2 =", c1-c2)
+print("a1 * b2 =", c1*c2)
+print("a1 / b2 =", c1/c2)
