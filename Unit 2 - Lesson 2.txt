@@ -1,0 +1,42 @@
+16.1.1. Understanding if-else construct
+distinction_marks = 75
+marks = float(input("marks: "))
+# write your code here
+if (marks > distinction_marks):
+	print("distinction")
+else:
+	print("not distinction")
+
+
+16.1.2. Problem Solving question
+a = int(input("amount: "))
+if a >= 1000:
+	print("He can")
+else:
+	print("He cant")
+
+
+16.1.3. Write a program for Income Tax Calculator
+# Deduction standard
+Ded_std = 150000
+# Request Inputs
+Ded_80c = int(input("deduction under 80c: "))
+Ded_80cc = int(input("deduction under 80cc: "))
+Ded_hra = int(input("deduction under HRA: "))
+Ded_med = int(input("deduction under Medical: "))
+Ded_tot = (Ded_std + Ded_80c + Ded_80cc + Ded_hra + Ded_med)
+Gross_Income = int(input("gross income: "))
+Tax_Income = Gross_Income - Ded_tot
+# complete the missing code required for the if block
+if (Gross_Income <= 500000):
+	Income_Tax = (Tax_Income * 0.1)
+elif(Gross_Income <= 1000000 and Gross_Income > 500000):
+	Income_Tax = 25000 + ((Gross_Income - 500000) * 20) / 100
+elif(Gross_Income > 1000000):
+	Income_Tax = 75000 + ((Gross_Income - 1000000)*0.3)
+if(Income_Tax > 0):
+	print("gross income:", Gross_Income)
+	print("total deductions:" , Ded_tot)
+	print("income tax:" , Income_Tax)
+else :
+	print ("hurray..no income tax")

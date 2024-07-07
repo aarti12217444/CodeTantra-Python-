@@ -1,0 +1,26 @@
+20.1.1. Usage of break statement
+n = int(input("n: "))
+m = int(input("m: "))
+for i in range(n, m):
+
+
+	if(i%5 == 0):
+		print(i)
+		break
+
+
+20.1.2. Write a program to find a given letter is a vowel or not
+vowels = "aeiouAEIOU"
+#Write your code here 
+while True:
+	c =input("vowel, or -1 to quit: ")
+	if c.isalpha() or c == "-1":
+		if c == "-1":
+			break
+		if c in vowels:
+			print("vowel")
+		else:
+			print("not vowel")
+	else:
+		print("wrong input")
+		continue

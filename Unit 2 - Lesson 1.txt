@@ -1,0 +1,22 @@
+15.1.1. Understanding Control Flow Statements
+(a) Selection Statements
+(c) Iterative Statements
+
+
+15.1.2. Understanding If construct
+num = int(input("num: "))
+#write your logic here
+if (num%3 == 0):
+	print("divisible by 3")
+	
+print("End of program")
+
+
+15.1.3. Understanding If construct
+(b) a and b are equal.
+15.1.4. Write the code
+w = input("Enter the word: ")
+if(w == "Rose"):
+	print("True")
+else:
+	print("False")

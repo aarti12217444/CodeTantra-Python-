@@ -1,0 +1,87 @@
+18.1.1. Understanding While loop
+n = int(input("num: "))
+sum = 0
+i = 0
+while i<n:
+	i = i + 1
+	if(i%2==0):
+		sum = sum + i
+print("sum:", sum)
+
+
+18.1.2. Understand else with while-loop
+# Python program to find the sum of integers between 0 and n where n is provided by user
+num = int(input("num: "))
+#write your logic here
+i = 0
+s = 0 #sum
+if(num>=0):
+	while( i <=num ):
+		#write your logic here
+		s += i
+		i += 1
+else:
+	#write your logic here
+	while( i >= num):
+		s = s+i
+		i = i - 1
+print("sum:", s)
+
+
+18.1.3. Write a program to find the G.C.D. of two given numbers
+x = int(input("x: "))
+y = int(input("y: "))
+# Write your logic to find out the GCD of x & y
+if (x == 0 or y == 0):
+	print("value must be non zero")
+else:
+	for i in range(1,x+1):
+		if x%i == 0 and y%i == 0:
+			gcd = i
+	print("gcd:", gcd)
+
+
+18.1.4. Write a program to Calculate Fibonacci numbers less than a given number and calculates the sum of all alternate numbers (even numbered) in the generated list.
+# Write your code here
+x = int(input("k: "))
+list1=[0]
+a = 1
+b= 0
+i = 0
+s = 0
+sum = 0
+while b < x:
+	s = a+b
+	a = b
+	b = s
+	
+	print(a)
+	list1.append(a)
+while(i<len(list1)):
+	if (i%2 != 0):
+		sum  += list1[i]
+	i=i+1
+print("sum:",sum)
+
+
+18.1.5. Write the code.
+x = int(input("k: "))
+i = 0
+while( i<x ):
+	if i%2 == 0:
+		print(f"{i} even number")
+	else:
+		print(f"{i} odd number")
+	i += 1
+
+
+18.1.6. While loop - Practice programs
+st2cap = dict()
+state = input("state or 'end' to quit: ")
+# write condition in while
+while( state!="end" ):
+	# store the input state & capital in a dictionary till the user enters state as end
+	capital= input("capital: ")
+	st2cap[state] = capital
+	state = input("state: ")
+print(sorted(st2cap.items()))

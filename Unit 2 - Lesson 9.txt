@@ -1,0 +1,155 @@
+23.1.1. Python Program to print Fibonacci series
+n = int(input("n: "))
+#write your code here
+a = 0
+b = 1
+while a<=n:
+	print(a)
+	a,b=b,a+b
+
+
+
+23.1.2. Write a python program to print prime numbers in a range
+#write your code here
+x = int(input("x: "))
+y = int(input("y: "))
+p = ""
+for i in range(x,y):
+	if(i > 1):
+		for j in range(2,i):
+			if (i%j)==0:
+				break
+		else:
+			print(i)
+
+
+
+23.1.3. Write a python program to find if a number is armstrong or not
+#write your code here
+n = input("n: ")
+r = len(n)
+n = int(n)
+s = 0
+t = n
+while t>0:
+	d = t%10
+	s += d**r
+	t = t//10
+print("sum of powers:", s)
+if s == n:
+	print("armstrong number")
+else:
+	print("not armstrong number")
+
+
+
+23.1.4. Program to find a character is a vowel or consonant
+# Type your program here...
+ch = input("ch: ")
+a= "aeiouAEIOU"
+if (ch.isalpha() == True):
+	if(ch in a):
+		print("vowel")
+	else:
+		print("consonant")
+else:
+	print("not an alphabet")
+
+
+
+23.1.5. Program to find the sum of digits of a number
+num = input("num: ")
+s = 0
+for i in num:
+	i = int(i)
+	s += i
+print("sum:", s)
+
+
+
+23.1.6. Program to determine if a number is strong
+n= int(input("num: "))
+s=0
+t=n
+while(n):
+	i=1
+	f=1
+	d=n%10
+	while (i<=d):
+		f *= i
+		i += 1
+	s += f
+	n //= 10
+if (s == t):
+	print("strong number")
+else:
+	print("not a strong number")
+
+
+
+23.1.7. Write a Python program to find the Biggest of Three numbers using nested if-else-if
+#write your logic here
+a,b,c = [int(x) for x in input("a,b,c: ").split(",")]
+g=0
+for i in a,b,c:
+	if g<i:
+		g=i
+print(g)
+
+
+
+23.1.8. Write a Python program to print Floyd's triangle
+#write your code here
+n=int(input("n: "))
+num=1
+for i in range(1,n+1):
+	for j in range(1, i+1):
+		print(num, end=" ")
+		num +=1
+	print()
+
+
+
+23.1.9. Program to determine if a number is perfect number and abundant number and deficient number
+num = int(input("num: "))
+list1=[]
+s = 0
+for i in range(1,num):
+	if(num%i==0):
+		list1.append(i)
+print("factors:", list1)
+for i in list1:
+	s += i
+print("sum:", s)
+if(s==num):
+	print("perfect")
+elif(s>num):
+	print("abundant")
+else:
+	print("deficient")
+
+
+
+23.1.10. Write a Python program to print pascal's triangle
+#write your code here
+rows=int(input("rows: "))
+for i in range(1,rows+1):
+	print(" "*(rows-i),end=" ")
+	c=1
+	for j in range(1,i+1):
+		print(c, sep="", end=" ")
+		c=c*(i-j)//j
+	print()
+
+
+
+23.1.11. Program to determine if a number is prime
+num = int(input("num: "))
+p=0
+for i in range(2,num):
+	if(num%i == 0):
+		p = "not a prime number"
+		break
+	else:
+		p = "prime number"
+print(p)
