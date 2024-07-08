@@ -1,0 +1,99 @@
+50.1.1. Object Oriented Programming - History
+(a) Object-oriented programming was first introduced at MIT in 1950’s.
+(b) In 1990, James Gosling of Sun Micro Systems developed a simple version of C++ called Java.
+50.1.2. Procedural programming
+(a) A programming paradigm informs how problems are analysed and solved in a programming language.
+(c) Large systems developed using procedural programming language can be difficult to maintain.
+50.1.3. Object based programming
+(a) A class is a combination of data and its associated meaningful functions.
+(b) Object based programming implements information hiding and abstraction.
+50.1.4. Object Oriented Programming - Basics
+(a) Objects are instances of classes.
+(c) A class is like the blueprint or design of which, instances are made.
+(d) A class contains both attributes and methods.
+50.1.5. Understanding OOPS Concepts
+(a) A class is a combination of data members and member functions.
+(b) An object is an instance of a class.
+(c) Data in an object represents the attributes or characteristics that define that object.
+(d) Methods of an object captures the behaviour of the real world object.
+50.1.6. OOPS Concepts
+(a) A class is a combination of data and functions, which is nothing but implementation of encapsulation.
+(c) An object is a run-time instance of a class.
+50.1.7. OOPS - Concepts
+(a) Abstraction.
+50.1.8. Writing a class in Python
+(c) Classes can contain both attributes and methods.
+50.1.9. Writing a class in Python
+#create an empty class Student
+class Student:
+	pass
+
+#create an object Stud_1 of the class
+Stud_1 = Student()
+#Take the name as input
+Stud_1.name = input("Enter name: ")
+#Take the branch as input
+Stud_1.branch = input("Enter branch: ")
+#Take the rank as input
+Stud_1.rank = input("Enter rank: ")
+#print the name, age and rank of the object
+print("Stud_1.name:", Stud_1.name)
+print("Stud_1.branch:", Stud_1.branch)
+print("Stud_1.rank:", Stud_1.rank)
+50.1.10. Writing a class in Python
+#create an empty class Student
+class student:
+	pass
+
+#create an object Stud_1 of the class
+Stud_1= student()
+#take three inputs name, age, degree and assign the inputs to the stud_1 object
+Stud_1.name = input("s1 name: ")
+Stud_1.age = input("s1 age: ")
+Stud_1.graduate = input("s1 degree: ")
+
+#create an object Stud_2 of the class
+Stud_2 = student()
+
+#take three inputs name, age, degree and assign the inputs to the stud_2 onject
+Stud_2.name = input("s2 name: ")
+Stud_2.age = input("s2 age: ")
+Stud_2.graduate = input("s2 degree: ") 
+
+#printing the details of the two students
+print("Stud_1.name:", Stud_1.name)
+print("Stud_1.age:", Stud_1.age)
+print("Stud_1.graduate:", Stud_1.graduate)
+print("Stud_2.name:", Stud_2.name)
+print("Stud_2.age:", Stud_2.age)
+print("Stud_2.graduate:", Stud_2.graduate)
+50.1.11. Writing a class and creating an instance
+class Employee:
+	pass
+#create an instance Emp_1
+Emp_1 = Employee()
+#take the input name
+name = input("name: ")
+#assign the input name to Emp_1.name
+Emp_1.name = name
+#assign 25000 to Emp_1.salary
+Emp_1.salary = 25000
+#print the name and salary of the employee
+print("Emp_1.name:", Emp_1.name)
+print("Emp_1.salary:", Emp_1.salary)
+50.1.12. Writing a class and creating an instance
+#create an empty class Manager
+class Manager:
+	pass
+
+#create an object manager_1 of the class Manager
+manager_1 = Manager()
+
+#take three inputs name, department, salary and assign the inputs to manager_1 object
+manager_1.name = input("name: ")
+manager_1.dept = input("department: ")
+manager_1.salary = input("salary: ")
+#printing the details of the manager
+print("Emp_1.name:", manager_1.name)
+print("Emp_1.department:", manager_1.dept)
+print("Emp_1.salary:", manager_1.salary)
