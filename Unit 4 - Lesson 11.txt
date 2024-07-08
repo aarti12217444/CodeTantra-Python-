@@ -1,0 +1,15 @@
+44.1.1. Understand the Methods in Dictionary
+#write your code here
+d1 = input("data1: ").split(",")
+d2 = input("data2: ").split(",")
+d3 = input("data3: ").split(",")
+d4 = input("data4: ").split(",")
+a = dict(zip(d1,d2))
+print("sorted dictionary:",sorted(a.items()))
+b = a.copy()
+print("copy of sorted dictionary:", sorted(b.items()))
+print("sorted keys of dictionary:", sorted(a.keys()))
+print("sorted values of dictionary:", sorted(a.values()))
+c = dict(zip(d3,d4))
+d = a | c
+print("sorted dictionary after updation:", sorted(d.items()))

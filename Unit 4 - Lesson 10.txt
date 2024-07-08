@@ -1,0 +1,144 @@
+43.1.1. Understanding dictionary functions
+data1 = input("data1: ")
+data2 = input("data2: ")
+list1 = data1.split(",")
+list2 = data2.split(",")
+#create a dictionary using the lists
+dict1 = dict(zip(list1,list2))
+#perform all(), any(), len() and sorted() on the created dict
+print("all(dict1):",all(dict1))
+print("any(dict1):",any(dict1))
+print("len(dict1):",len(dict1))
+print("sorted(dict1):",sorted(dict1))
+print("key,value of dictionary: ")
+for key,value in sorted(dict1.items()):
+	print(key+":"+value)
+43.1.2. Write a program to change dictionary keys into values and values into keys
+data1 = input("data1: ")
+data2 = input("data2: ")
+list1 = data1.split(",")
+list2 = data2.split(",")
+#create a dictionary using the lists
+dict1 = dict(zip(list1,list2))
+#write your logic here
+print("before exchange:", sorted(dict1.items()))
+dict2 = dict(zip(list2,list1))
+print("after exchange:", sorted(dict2.items()))
+43.1.3. Write a program to take tuple and list to create dictionary
+troupe = {('Cleese', 'John') : [1, 2, 3],
+			('Chapman', 'Graham') : [4, 5, 6],
+			('Idle', 'Eric') : [7, 8, 9],
+			('Jones', 'Terry') : [10, 11, 12],
+			('Gilliam', 'Terry') : [13, 14, 15, 16, 17, 18],
+			('Palin', 'Michael') : [19, 20]}
+
+#write your code here
+for i,j in sorted(troupe.items()):
+	a = (list(i))
+	print(a[1],a[0],j)
+43.1.4. Write a program to print a dictionary which has addition of two dictionary values which has same Key in both dictionaries.
+data1 = input("Enter integer elements separated by ,(comma) for keys of dict1: ")
+data2 = input("Enter integer elements separated by ,(comma) for values of dict1: ")
+list1 = data1.split(",")
+list2 = data2.split(",")
+for i in range(len(list1)):
+	list1[i] = int(list1[i])
+	
+for i in range(len(list2)):
+	list2[i] = int(list2[i])
+dict1 = dict(zip(list1, list2))
+
+data3 = input("Enter integer elements separated by ,(comma) for keys of dict2: ")
+data4 = input("Enter integer elements separated by ,(comma) for values of dict2: ")
+list3 = data3.split(",")
+list4 = data4.split(",")
+for i in range(len(list3)):
+	list3[i] = int(list3[i])
+	
+for i in range(len(list4)):
+	list4[i] = int(list4[i])
+dict2 = dict(zip(list3, list4))
+
+dict3 = {}
+#Write your code here to complete your solution
+for i in dict1.keys():
+	if i in dict2.keys():
+		dict3[i] = dict1[i]+dict2[i]
+	else:
+		dict3[i]=dict1[i]
+for i in dict2.keys():
+	if i not in dict3.keys():
+		dict3[i]=dict2[i]
+print(list(sorted(dict3.items())))
+43.1.5. Write a program to print a dictionary, from a given sequence as key and value
+#write your code here
+a = input("seq: ").split(",")
+b = {}
+c = list(set(a.copy()))
+for i in c:
+	t = a.count(i)
+	b[int(i)]=t
+print('sorted dictionary:', list(sorted(b.items())))
+
+43.1.6. Write a program to check the existence of key
+#write your code here
+a = input("data1: ").split(',')
+b = input("data2: ").split(',')
+t1 = dict(zip(a,b))
+c = input("data3: ").split(',')
+d = input("data4: ").split(',')
+t2 = dict(zip(c,d))
+key = input("key: ")
+if key in t1.keys() and key not in t2.keys():
+	print("present in first")
+elif key in t2.keys() and key not in t1.keys():
+	print("present in second")
+elif key in t1.keys() and key in t2.keys():
+	print("present in both")
+else:
+	print("key is not present")
+43.1.7. Write a program to print a dictionary with key order and value order
+a = input("data1: ")
+b = input("data2: ")
+a = a.split(',')
+b = b.split(',')
+#create a dictionary with the lists
+d = dict(sorted(zip(a,b)))
+d2 = dict(sorted(zip(b,a)))
+
+print("dictionary with key order")
+#write your logic to print in key value order
+for i,j in d.items():
+	print(i,j)
+
+print("dictionary with value order")
+#write your logic to print in value key order
+for i,j in d2.items():
+	print(i,j)
+43.1.8. Write a Program to Concatenate Two Dictionaries
+#write your code here
+d1 = list(map(int,input("data1: ").split(",")))
+d2 = list(map(int,input("data2: ").split(",")))
+d3 = list(map(int,input("data3: ").split(",")))
+d4 = list(map(int,input("data4: ").split(",")))
+a = dict(zip(d1,d2))
+b = dict(zip(d3,d4))
+for i in b.keys():
+	if i in a.keys():
+		a[i]+=b[i]
+	else:
+		a[i]=b[i]
+print("concatenation:",list(sorted(a.items())))
+43.1.9. Write a Program to Create a Dictionary of Common Keys in two given Dictionaries
+#write your code here
+d1 = list(map(int,input("data1: ").split(",")))
+d2 = list(map(int,input("data2: ").split(",")))
+d3 = list(map(int,input("data3: ").split(",")))
+d4 = list(map(int,input("data4: ").split(",")))
+a = dict(zip(d1,d2))
+b = dict(zip(d3,d4))
+c = {}
+for i in a.keys():
+	if i in b.keys():
+		c[i]=a[i]+b[i]
+print("common keys:",list(sorted(c.items())))
