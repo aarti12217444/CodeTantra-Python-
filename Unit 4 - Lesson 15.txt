@@ -1,0 +1,15 @@
+48.1.1. Understanding Set Comprehensions
+n1 = int(input("n1: "))
+n2 = int(input("n2: "))
+
+#fill in the missing code..
+
+my_set = {i*i if i%2==0 else i**3 for i in range(n1,n2)}
+
+print(sorted(my_set))
+48.1.2. Understanding Nested Set Comprehension
+#fill in the missing code...
+n = int(input())
+s = { (a,b,c) for a in range(1,n+1) for b in range(1,n+1) for c in range(1,n+1) if a*a == b*b+c*c and c<=b }
+
+print(sorted(s))

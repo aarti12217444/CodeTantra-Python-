@@ -1,0 +1,10 @@
+49.1.1. Dictionary Comprehensions
+start = int(input())
+end = int(input())
+
+#fill in the missing code..
+
+cube_dict = {num: num ** 3 for num in range(start,end+1) }
+
+sorted_cube_dict = dict(sorted(cube_dict.items()))
+print(sorted_cube_dict)

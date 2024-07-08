@@ -1,0 +1,97 @@
+46.1.1. Methods and Functions for set
+(c) s1 = {1, 2}
+	s1.add(5)
+	s2 = s1.copy() will result in s1 = {1, 2, 5} and s2 = {1, 2, 5}
+(e) You can have frozen sets as members of a set.
+
+
+46.1.2. Write a Program to determine if a Set is a Subset of another Set
+data1 = input("data1: ")
+list1 = data1.split(",")
+set1 =  set(list1)
+
+#fill in the missiong code
+
+data2 = input("data2: ")
+list2 = data2.split(",")
+set2 =  set(list2)
+
+data3 = input("data3: ")
+list3 = data3.split(",")
+set3 =  set(list3)
+
+print("set1 sorted:", sorted(set1))
+print("set2 sorted:", sorted(set2))
+print("set3 sorted:", sorted(set3))
+
+print("is set1 subset of set2?", set1.issubset(set2))
+print("is set2 subset of set1?", set2.issubset(set1))
+print("is set1 subset of set3?", set1.issubset(set3))
+print("is set3 subset of set1?", set3.issubset(set1))
+print("is set2 subset of set3?", set2.issubset(set3))
+print("is set3 subset of set2?", set3.issubset(set2))
+
+
+
+46.1.3. Write a Program to determine if Sets are Disjoint?
+
+data1 = input("data1: ")
+list1 = data1.split(",")
+set1 = set(list1)
+#fill in the missing code
+
+data2 = input("data2: ")
+list2 = data2.split(",")
+set2 = set(list2)
+
+data3 = input("data3: ")
+list3 = data3.split(",")
+set3 = set(list3)
+
+print("set1 sorted:", sorted(set1))
+print("set2 sorted:", sorted(set2))
+print("set3 sorted:", sorted(set3))
+print("is set1, set2 disjoint?", set1.isdisjoint(set2))
+print("is set1, set3 disjoint?", set1.isdisjoint(set3))
+print("is set2, set3 disjoint?", set2.isdisjoint(set3))
+
+
+
+46.1.4. Write a Program to illustrate basic operations on Sets
+data1 = input("data1: ")
+list1 = data1.split(",")
+set1 = set(list1)
+
+data2 = input("data2: ")
+list2 = data2.split(",")
+set2 = set(list2)
+
+data3 = input("data3: ")
+list3 = data3.split(",")
+set3 = set(list3)
+
+set_1_2 = set1.union(set2) # perform union of set1 and set2, print the set.
+print(sorted(set_1_2))
+set_1_2_3 = set_1_2.union(set3) # perform union of set_1_2 and set3 and print it.
+print(sorted(set_1_2_3))
+# take an element from the user.
+e = input()
+# discard the user-given element from set_1_2_3.
+set_1_2_3.discard(e)
+print(sorted(set_1_2_3))
+intersection = set_1_2.intersection(set_1_2_3) # find the intersection of set_1_2 and set_1_2_3 and print it.
+print(sorted(intersection))
+# check whether intersection is subset of set_1_2_3 or not and print the result.
+print(intersection.issubset(set_1_2_3))
+diff1 = set_1_2 - set_1_2_3 # find the difference of set_1_2 and set_1_2_3 and print it.
+print(sorted(diff1))
+diff2 = set_1_2_3 - set_1_2 # find the difference of set_1_2_3 and set_1_2 and print it.
+print(sorted(diff2))
+# take an element from the user.
+e2 = input()
+# add the user-given element to the diff2 and print diff2.
+diff2.add(e2)
+print(sorted(diff2))
+# remove the user-given element from the diff2 and print diff2.
+diff2.discard(e2)
+print(sorted(diff2))
