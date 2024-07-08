@@ -1,0 +1,101 @@
+39.1.1. Overview of List methods
+(a)append()
+(b)extend()
+(c)insert(index, item)
+(d)remove(element)
+(e)pop()
+39.1.2. Overview of List methods
+#write your code here
+a = input("data1: ").split(',')
+b = input("element: ")
+a.append(b)
+print("after append:",a)
+c = input("data2: ").split(",")
+a.append(c)
+print("after append:",a)
+a.extend(c)
+print("after extending:", a)
+39.1.3. Write a Program to create a List using append() method
+#write your code here
+a = int(input("size: "))
+l = []
+for i in range(a):
+	l.append(input("element: "))
+print("list:",l)
+39.1.4. Write a program to reverse a given List
+#write your code here
+i = input("data: ").split(",")
+print("reverse:",i[::-1])
+39.1.5. Write a program to print the count of a of particular element in a List without using count() method.
+#write you code here
+a = input("data: ").split(',')
+b = input("element: ")
+c = a.count(b)
+print(f"{b} occurs {c} times")
+39.1.6. Write a program to find the sum of elements of a List without using sum() method
+data = input("data: ")
+list1 = data.split(",")
+#complete the loop to convert the elements to integer type
+l=[]
+for i in list1:
+	l.append(int(i))
+sum1 = 0
+#complete the loop to find the sum
+for i in range(len(list1)):
+	sum1 = sum1 + l[i]
+
+print("sum:",sum1)
+39.1.7. Write a program to find a given element, if the element to be found and its next element are the same then return True as output, otherwise return False.
+a = list(map(int,input("data: ").split(",")))
+print("list:",a)
+n = int(input("num: "))
+for i in range(len(a)):
+	if a[i]==n:
+		if a[i+1]==n:
+			print(True)
+			break
+else:
+	print(False)
+39.1.8. Write a Program to find Sequence of elements in a List
+
+#write your code here
+a = sorted(input("data: ").split(","))
+b = sorted(input("seq of elements: ").split(","))
+if set(b).issubset(set(a)):
+	print("exist")
+else:
+	print("does not exist")
+39.1.9. Write a Program to Print new list with Odd Indexed Elements in given List
+#write your code here
+x = input("data: ").split(",")
+a = ""
+for i in range(1,len(x),2):
+	a = a+x[i]+", "
+print(f"odd index elements: [{a[:-2]}]")
+39.1.10. Write a Program to Add all alphabets both small and upper case letters into a List
+#write your code here
+A = input("Please enter A in upper case: ")
+a = input("Please enter A in lower case: ")
+l = []
+for i in range(26):
+	l.append(chr(ord(A)+i))
+	l.append(chr(ord(a)+i))
+print(l)
+39.1.11. Write a program to check whether the given list is in sorted order or not
+#Write your code here
+a = list(map(int,input("data: ").split(",")))
+if a == sorted(a):
+	print(True)
+else:
+	print(False)
+39.1.12. Write a Program to Print Number of Characters in a given String using List
+from collections import Counter
+#write your code here
+a = input("Please enter a sentence: ").lower()
+l = []
+for i in a:
+	if i.isalpha()==True:
+		l.append(i)
+b = Counter(l)
+for i in sorted(set(l)):
+	print(i,"\t",b[i])

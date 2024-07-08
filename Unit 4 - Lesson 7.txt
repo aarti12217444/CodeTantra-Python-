@@ -1,0 +1,114 @@
+40.1.1. Introduction to tuples
+(c) Tuples can be used as keys in dictionaries.
+(d) Elements of a tuple are enclosed in parenthesis.
+(f) It is possible to create tuples which contain mutable objects, such as lists.
+40.1.2. Write a Program to Convert a User given List into Tuple.
+data = input("data: ")
+list1 = data.split(",")
+print("list:", list1)
+#convert the above list to tuple
+tuple1 = tuple(list1)
+#print the tuple
+print("tuple:",  tuple1 )
+40.2.1. Understanding basic tuple operations
+(c) The result of concatenation of two tuples when assigned to one of the tuple creates a new tuple.
+(d) The result of repetition of a tuple when assigned to the same tuple will result in a new tuple.
+40.2.2. Accessing the elements of a tuple
+data = input("data: ")
+list1 = data.split(",")
+print("list:", list1)
+#convert the list into tuple
+mytuple = tuple(list1)
+print("tuple:",mytuple)
+#take the input fr index
+index = int(input("index: "))
+#write your code here to find the element at index
+if index<len(mytuple) and -index<=len(mytuple):
+	print("element:",mytuple[index])
+else:
+	print("enter valid index")
+40.2.3. Understanding tuple assignment
+(b) The output of the following code: ('ac',) * 2 is ('ac', 'ac').
+(c) (1, 2, 3) > (1, 0, 3) is True.
+40.2.4. Understanding Tuple Repetition and Concatenation
+#write your code here
+a = tuple(input("data1: ").split(","))
+b = int(input("value: "))
+print("tuple * ",b,"=",a*b)
+a2 = tuple(input("data2: ").split(","))
+print("concatenation:", a+a2)
+40.2.5. Membership test in a Tuple
+data = input("data: ")
+list1 = data.split(",")
+#convert the list to tuple
+tuple1 = tuple(list1)
+print("tuple:", tuple1)
+#take an input element
+input = input("value: ")
+#write your logic to check for the condition
+if input in tuple1:
+	print(True)
+else:
+	print(False)
+40.2.6. Deleting a tuple
+mytup = ('a', 'b', 'c', 'd', [1, 2, 3])
+print("mytup =", mytup)
+print("del mytup[4][2]")
+
+# delele the element 3 from the mytup
+del mytup[-1][-1]
+print("mytup =", mytup)
+print("del mytup[4] will give TypeError")
+40.2.7. Write a Program to Add an element into Tuple based on user given Value in Specific Index
+data = input("data: ")
+list1 = data.split(",")
+#convert the list to tuple
+tuple1 = tuple(list1)
+#get input for index
+index = int(input("index: "))
+#write your logic here to insert the value
+if index<len(tuple1) and -index<=len(tuple1):
+	val = input("value: ")
+	list1[index] = val
+	tuple1 = tuple(list1)
+	print("tuple:",tuple1)
+else:
+	print("enter valid index")
+40.2.8. Write a program to remove an element from tuple based on user given Index
+data = input("data: ")
+list1 = data.split(",")
+#convert the list to tuple
+tuple1 = tuple(list1)
+#print the tuple
+print("tuple:",tuple1)
+#get input for index
+index = int(input("index: "))
+#write your logic here to delete the value at given index
+if index<len(tuple1) and -index<=len(tuple1):
+	del list1[index]
+	print("after removing:", tuple(list1))
+else:
+	print("enter valid index")
+40.2.9. Write a Program to Compare Two given Tuples
+data = input("data1: ")
+list1 = data.split(",")
+#convert the list1 to tuple
+tuple1 = tuple(list1)
+data1 = input("data2: ")
+list2 = data1.split(",")
+#convert the list2 to tuple
+tuple2 = tuple(list2)
+#write your logic here to compare them
+if tuple1 == tuple2:
+	print(True)
+else:
+	print(False)
+40.2.10. Write a Program to Find the Tuple elements within a range of User given ranges
+#write your code here
+data = input("data: ").split(",")
+s = int(input("start index: "))
+e = int(input("end index: "))
+if e<len(data) and -e<=len(data):
+	print("tuple in given range:", tuple(data[s:e]))
+else:
+	print("enter valid index")
