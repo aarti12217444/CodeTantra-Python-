@@ -1,0 +1,193 @@
+37.1.1. Understand the List Operations
+(a)l1 = [1, 20, 30, 40] index of l1 starts from 0.
+37.1.2. Create and access a List
+# write your code here
+b = input("data: ").split(',')
+print('list:',b)
+a=int(input("index: "))
+try:
+	print('element:',b[a])
+except:
+	print('invalid')
+37.1.3. Write a program to find whether a given element exists in a list or not
+x = input("data: ")
+y = input("element: ")
+print(y in x)
+37.1.4. Write a Program to print the first and last elements of a List.
+x = input("data: ")
+x = x.split(',')
+print("first, last elements:", x[0],x[-1])
+37.1.5. Understanding List slicing
+input_str = input("Enter a list of numbers separated by spaces: ")
+# Convert input string into a list of integers
+a = []
+b= input_str.split(' ')
+for i in b:
+	if i != " ":
+		a.append(int(i))
+
+# Get user inputs start,stop and step for slicing parameters
+s = int(input("start index: "))
+e = int(input("stop index: "))
+v = int(input("step value: "))
+# Create a new list using slicing
+
+# Display the sliced list
+print("Sliced List:",a[s:e:v])
+37.1.6. Write a program to print True as output if the first or last element of a List is 3 otherwise print False
+i = input("data: ")
+#a = i.split[',']
+if i[0] == "3" or i[-1] == "3":
+	print(True)
+else:
+	print(False)
+37.1.7. Understanding List Repetition and Concatenation
+# write your code here
+x = input("data1: ")
+y = input("data2: ")
+n = int(input("num: "))
+x = x.split(",")
+print(x*n)
+y = y.split(",")
+print(y*n)
+print("extending list1 with list2:", x+y)
+37.1.8. Understanding list comparison
+x = input("data1: ")
+y = input("data2: ")
+l1 = []
+l2 = []
+x = x.split(',')
+y = y.split(',')
+
+print("is equal:",x == y)
+print("is not equal:", x != y)
+37.1.9. Write a program to print EQUAL if first and last elements of a list are same otherwise print NOT EQUAL
+
+x = input("data: ")
+x = x.split(',')
+if x[0]==x[-1]:
+	print("equal")
+else:
+	print("not equal")
+37.1.10. Understanding Mutability in Lists
+# write your code here
+x = input("data: ")
+x = x.split(",")
+print("before updation:", x)
+i = int(input("index: "))
+if len(x) <= i or -len(x) >=i:
+	print("invalid")
+else:
+	e = input("element: ")
+	x[i] = e
+	print("after updation:",x)
+37.1.11. Write a Program to find the largest of the first and last elements of a List
+x = input("data: ")
+x = x.split(',')
+g = 0
+l= []
+for i in x:
+	l.append(int(i))
+print(l)
+print("largest among first, last elements:", end=" ")
+if x[0]>x[-1]:
+	print(x[0])
+else:
+	print(x[-1])
+37.1.12. Understanding List aliasing
+# write your code here
+list1 = list(input("data: ").split(','))
+list2 = list1
+print("list1 is list2:",list1 is list2)
+print("list2 is list1:",list2 is list1)
+i = int(input("index: "))
+if len(list1)>=-i and len(list1)>i:
+#if i<len(list1) and i>=-len(list1):
+	z = input("element: ")
+	list1[i] = z
+	print("list1 is list2:", list1 is list2)
+	print("list2 is list1:", list2 is list1)
+else:
+	print("enter valid index")
+37.1.13. Understanding List Cloning
+# write your code here
+x = input("Enter a list of numbers separated by spaces: ")
+l=[]
+for i in x.split(' '):
+	l.append(int(i))
+print("Original List:", l)
+a = l[:]
+a[0]=100
+print("Cloned List (Slicing):", a)
+b= list(l)
+b[1] = 200 
+print("Cloned List (list() Function):",b)
+c = l.copy()
+c[2] = 300
+print("Cloned List (copy() Method):",c)
+37.1.14. Write a program to check whether the first and last elements of two given Lists are same or not
+x = input("data1: ").split(",")
+y = input("data2: ").split(",")
+if (x[0]==y[0]) or (x[-1] == y[-1]):
+	print("True")
+else:
+	print("False")
+37.1.15. Understanding and implementing deletion operations on elements in a list.
+Warning: Use spaces to indent the functions or it will give Indentation Error
+
+initial_input = input("Enter elements: ")
+my_list = initial_input.split()
+print("Current List: ", my_list)
+
+def delete_elements_del():
+    index = int(input("Enter the index to delete an element: "))
+    # Check if the index is valid or not
+    try:
+        # Delete element at the specified index using 'del'
+        del my_list[index]
+        print("Updated list: ", my_list)
+    except:
+        print("Invalid index")
+
+def delete_elements_remove():
+    element_to_remove = input("Enter an element to remove: ")
+     # Check if element is in the list or not
+    if element_to_remove in my_list:
+        # Remove the element using 'remove()' method
+        my_list.remove(element_to_remove)
+        print("Updated list: ", my_list)
+    else:
+        print("Element not found")
+
+def delete_elements_pop():
+    index = int(input("Enter an index to pop an element: "))
+    # Check if the index is valid or not
+    try:
+        # Pop element at the specified index using 'pop()' method
+        print("Popped element: ",my_list.pop(index))
+        print("Updated list: ", my_list)
+    except:
+        print("Invalid index")
+
+def clear_list():
+   # Clear the list using 'clear()' method
+    my_list.clear()
+    print("Cleared list: ", my_list)
+
+
+# Performing operations one by one
+delete_elements_del()
+delete_elements_remove()
+delete_elements_pop()
+clear_list()
+
+print("Exiting the program")
+37.1.16. Write a program to remove all the duplicates from a List.
+# write your code here
+x = input("data: ").split(',')
+print(x)
+l=[]
+for i in x:
+	if i not in l:
+		l.append(i)
+print("after removing duplicates:",l)
