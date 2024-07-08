@@ -1,0 +1,118 @@
+34.1.1. Introduction to Strings
+str= input("str: ")
+print(str)
+
+
+34.2.1. Operations of Strings
+# Prompt the user to enter a string
+s = input("String: ")
+# Print entire string
+print(s) 
+
+# Print second character of string from beginning
+print("Second character from first:",s[1])
+
+# Print second character of string from end 
+print("Second character from end:",s[-2])
+
+
+34.2.2. Understanding Slicing Operator
+(a)The last character of the string, including it.
+
+
+34.2.3. Different examples on Slicing Operations
+(b)"DEFGH"
+
+
+34.2.4. Write a program to print a string after removing first and last characters
+str = input("str: ")
+print("output:", str[1:-1])
+
+
+34.2.5. Concatenation of strings
+str1 = input("str1: ")
+str2 = input("str2: ")
+print(str1, str2)
+
+
+34.2.6. Program to perform concatenation on two strings.
+str1 = input("str1: ")
+str2= input("str2: ")
+print("result: "+str1+str2+str2+str1)
+
+
+34.2.7. Program to remove a character from string based on integer value given by the user.
+str = input("str: ")
+num = int(input("num: "))
+if(len(str)>num):
+	print("output:",str[0:num]+str[(num+1):])
+else:
+	print("num should be positive, less than the length of str")
+
+
+34.2.8. Program to print the concatenated string by excluding first character.
+str1 = input("str1: ")
+str2 = input("str2: ")
+if len(str1)<=1:
+	print("null")
+else:
+	print("output:",str1[1:]+str2[1:])
+
+
+34.2.9. Program to swap first and last characters of given string and display the result.
+
+str = input("str: ")
+if len(str) == 0:
+	print("null")
+elif len(str) == 1:
+	print(str)
+else:
+	print("output:",str[-1]+str[1:-1]+str[0])
+
+
+34.2.10. Program to print first and last two characters of given string
+#Type Content here...
+i = input("input: ")
+if(len(i)>3):
+	print("output:",i[0:2]+i[-2:])
+else:
+	print("output:",i)
+
+
+34.2.11. Understanding Membership Operator
+(c)print('z' not in str) returns True
+34.2.12. Repetitions of a String
+a = input("str: ")
+print(a*4)
+print(a[::-1]*3)
+
+
+
+34.2.13. Program to print 3 copies of first three characters of a string.
+a = input("str: ")
+if len(a)<3:
+	print("result:",a)
+else:
+	print("result:",a[0:3]*3)
+
+
+
+34.2.14. Program to print a given string which repeats 'n' times.
+a = input("str: ")
+b = int(input("num: "))
+print("result: "+a*b)
+
+
+
+34.2.15. Program to repeat first n characters of the given string n times
+a = input("str: ")
+b = int(input("num: "))
+if b>0:
+	print("result:", a[0:b]*b)
+else:
+	print("num should be positive, less than length of str")
+
+
+34.2.16. Understanding String Immutability
+(a)Deleting characters within strings violates the immutability principle of strings.
+

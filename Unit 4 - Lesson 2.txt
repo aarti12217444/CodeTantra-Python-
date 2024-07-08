@@ -1,0 +1,210 @@
+35.1.1. Functions of String Data Type
+(a)In Python, we can convert strings of Uppercase letters into lower case and lower case to upper case using swapcase() method.
+(d)print('abcpyxyzpython', 3, 10) - Outputs: abcpyxyzpython 3 10.
+35.1.2. Methods Of Strings - count(), replace(), join()
+str1 = input("str: ")
+# Convert the string to uppercase
+st = str1.upper()
+print(st)
+# Convert the string to title case
+st1 = str1.title()
+print(st1)
+
+# Split the string into a list of words
+st2 = str1.split(' ')
+print(st2)
+
+width = int(input("width: "))
+fill_char = input("fillchar: ")
+# Center align the string with given width and fill character
+print(str1.center(width,fill_char))
+# Convert the string to lowercase
+print(str1.lower())
+str2 = input("Enter a joining character: ")
+# Join the characters of the string with the given character
+a = str2.join(str1)
+print(a)
+replace_old = input("old substring: ")
+replace_new = input("new substring: ")
+# Replace occurrences of old substring with new substring
+strr = str1.replace(replace_old,replace_new)
+print(strr)
+35.1.3. Methods Of Strings - isupper(), islower(), isalpha(), isalnum()
+(b)print("Hello123".isalpha()) returns False.
+(c)str = '123', the below code is correct to convert string into int. print(int(str)) # 123.
+(d)str = "hello world", print(str.isalnum()) returns False.
+35.1.4. Methods of Strings - isdigit(), isspace(), istitle()
+str = input("str: ")
+# Complete below condition and check whether string contains only digits or not.
+if str.isdigit() == True:
+	print("str contains only digits")
+else:
+	print("str does not contains only digits")
+
+# Complete below condition and check whether string contains only spaces or not.
+if str.isspace() == True:
+	print("str contains only space")
+else:
+	print("str does not contains only space")
+
+# Complete below condition and check if the string is in title case or not.
+if str.istitle() == True:
+	print("str is in title case")
+else:
+	print("str is not in title case")
+35.1.5. Escape Sequences in Strings
+(d)print("This is a string with a double quote character.")
+35.1.6. Escape Sequences
+(c)Escape sequences can be printed as they are, without being interpreted as special characters, by using the repr() function or the r / R prefix.
+35.1.7. Methods of Strings - startswith(), endswith(), find(), len(), min(), max()
+str = input("str: ")
+start_substring = input("start_substring: ")
+end_substring = input("end_substring: ")
+search_substring = input("search_substring: ")
+
+print(str.startswith(start_substring)) # Check if the string starts with the given starting substring
+print(str.endswith(end_substring)) # Check if the string ends with the given ending substring
+print(str.find(search_substring)) # Find and display the index of the search substring
+print(len(str)) # Display length of the main string
+print(min(str)) # Display the minimum character in main string
+print(max(str)) # Display the maximum character in main string
+35.1.8. Program to enclose the longer string with-in the shorter string and display the result.
+str1 = input("str1: ")
+str2 = input("str2: ")
+
+# Calculate the lengths of the input strings
+l1 = len(str1)
+l2 = len(str2)
+
+# Print strings are equal if the both lengths are equal
+if l1 == l2:
+	print("strings are same length")
+# If the length of str1 is shorter than the length of str2, print the concatenation
+elif l1<l2:
+	print(str1+str2+str1)
+# If the length of str1 is longer than the length of str2, print the concatenation
+else:
+	print(str2+str1+str2)
+35.1.9. Write a program to find whether a given string starts with 'Python' or not.
+# Note: Python and python are different.
+
+str = input("str: ")
+# write yur code here
+if str.startswith("Python"):
+	print("str is:", str)
+else:
+	print("str after adding \'Python\': Python", str)
+35.1.10. More String methods
+# Take a string input form the user
+s = input("str: ")
+# Reverse the string using slicing operator
+print(s[::-1])
+35.1.11. Write a program to remove all digit in given string.
+# import string module
+import string
+str = input("str: ")  
+result = ""  # Initializing an empty string to store the result
+# Iterate through each character in string (str), and if the character is not a digit, add it to the result.
+for i in str:
+	if i.isnumeric() == False:
+		result = result+i
+
+# Print the result after removing all digits
+print("String after removing all digits:", result)
+35.1.12. Write a program to find number of times a particular sub string appears in a given string.
+str1 = input("str1: ")
+str2 = input("str2: ")
+
+print("count:",str1.count(str2)) # print the count count of str2 occured in str1
+
+35.1.13. Write a program to print every character of a string twice.
+str = input("str: ")
+# write your code here to print the every character in the given string twice
+d=''.join([i+i for i in str])
+print("result: ",d)
+35.1.14. Write a program to print half of a given string.
+str = input("str: ")
+l= len(str)
+# write your code here
+if l%2==0:
+	print("first half str of even length:",str[0:int(l/2)])
+else:
+	print("second half str of odd length:",str[int(l/2)+1:])
+35.1.15. Write a Program to print a character and skip the next character, follow this till the end of string.
+str = input("str: ")
+
+# Initializing empty strings for alternate characters
+fstr = ""
+sstr = ""
+
+# Check if the input string is empty
+
+if str=='':
+	print("null")
+	fstr=""
+	sstr=""
+# Check if the input string has only one character
+
+elif len(str)==1:
+	print(str)
+	fstr=str
+	sstr=""
+# Extract alternate characters into the first and second strings
+else:
+	fstr=str[::2]
+	sstr=str[1::2]
+# Displaying the first and second strings
+print("first:", fstr)
+print("second:", sstr)
+
+# Combine the alternate characters to recreate the original string
+
+original=str
+
+# Add any remaining characters from the longer string
+
+
+# Displaying the original reconstructed string
+print("original:", original)
+35.1.16. Write a program to print each character of a string in incremental order.
+str = input("str: ")
+inc=""
+for i in range(0,len(str)):
+	inc = inc+str[0:i+1]
+print("incremental order:",inc )
+35.1.17. Write a program to remove hyphens from a given string.
+# Write your code here
+str = input("str with hyphens: ")
+for i in str.split('-'):
+	print(i,end="")
+35.1.18. Program to print ASCII values of the characters within the given range..
+start_char = input("start character: ")
+end_char = input("end character: ")
+if len(start_char)>1:
+	print("Please enter single characters.")
+else:
+	a = ord(start_char)
+	b = ord(end_char)
+	print("Character\t ASCII Code")
+	# write your code here
+	for i in range(a,b+1):
+		print(f"{chr(i)} \t\t {i}")
+35.1.19. Write a program to find how many times each character is repeated in a given string.
+from collections import Counter
+# Get the Input string
+k = input("str: ")
+# Sort the string
+k = sorted(k)
+# Take empty List
+l = []
+k=Counter(k)
+for i in k:
+	print("'"+str(i)+f"'\t{k[i]}")
+
+print(list(k))
+35.1.20. Write a program to find how many times a single digit is repeated in a given number.
+from collections import Counter
+k = input("str: ")
+k=Counter(k)
+for i in k:
+	print(f"{str(i)} \t {k[i]}")

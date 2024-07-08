@@ -1,0 +1,24 @@
+36.1.1. Introduction to Lists
+(c)Lists are ordered and can contain other lists as elements.
+36.1.2. Understanding Creation of List
+data = input("data: ")
+# print type of input data here
+print("type of data:",type(data))
+
+list1 = data.split() # split() is used to convert a string into list
+
+# print list1
+print("list:",list1)
+# print type of list1
+print("type of list:",type(list1))
+36.1.3. Write a Program to create a List
+data=input("data: ")
+l= data.split(',')
+print("list:",l)
+print("type of list:",type(l))
+36.1.4. Different Types of Lists
+list1 = ["Python", 100, "Lists", 8.8,'A', "Program"]
+# print the list1 items
+print("List1 contains:",list1)
+# print the type of list1
+print("Type of list1:",type(list1))
