@@ -1,0 +1,12 @@
+31.1.1. Understanding Mathematical Functions
+import math
+num = float(input("num: "))
+if (num - int(num) >= 0.5):
+	print ("result:", math.ceil(num)) #print the ceil value of num
+else:
+	print("result:", math.trunc(num)) #print the trunc value of num
+
+
+
+31.2.1. Understanding Random Module
+(a) random() function returns random values between 0.0 and 1.0 only.

@@ -1,0 +1,43 @@
+32.1.1. Understanding Trigonometric Functions
+import math
+
+print("degrees 0 30 45 60 90")
+#convert the given degrees to radians
+a=0
+b=math.radians(30)
+c=math.radians(45)
+d=math.radians(60)
+e=math.radians(90)
+
+#print the trigoometric values of the radians for sin, cos, tan
+print("sin",math.sin(a), math.sin(b), math.sin(c), math.sin(d), math.sin(e))
+print("cos",math.cos(a),math.cos(b),math.cos(c),math.cos(d),math.cos(e))
+print("tan",math.tan(a),math.tan(b),math.tan(c),math.tan(d),math.tan(e))
+
+
+
+
+32.2.1. Understanding Mathematical Constants
+(c) math.tau is equal to 2π.
+(e) math.nan stands for "Not a Number".
+(f) math.pi is an irrational number.
+
+
+
+32.2.2. Program to print values of mathematical constants
+
+#import math module
+import math
+
+print("constant\tvalue\tdata type")
+#print value and type of pi
+print("pi\t",math.pi,"\t",type(math.pi))
+
+#print value and type of e
+print("e\t",math.e, "\t",type(math.e))
+
+#print value and type of inf
+print("inf\t", "{:17}".format(math.inf), "\t", type(math.inf))
+
+#print value and type of nan
+print("NaN\t", "{:17}".format(math.nan), "\t", type(math.nan))

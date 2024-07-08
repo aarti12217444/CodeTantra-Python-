@@ -1,0 +1,67 @@
+33.1.1. Write a program to calculate the number of days elapsed since the birthday.
+
+from datetime import datetime
+def dayCount(dob,date):
+	a = datetime.strptime(dob,'%d%m%Y')
+	b = datetime.strptime(date,'%d%m%Y')
+	return(b-a).days
+
+dob = input("dob in ddmmyyyy format: ")
+dd = int(dob[:2])
+mm = int(dob[2:4])
+yy = int(dob[4:])
+
+todaysDate = input("today's date in ddmmyyyy format: ")
+dd1 = int(todaysDate[:2])
+mm1 = int(todaysDate[2:4])
+yy1 = int(todaysDate[4:])
+
+
+print("days since birthday:", dayCount(dob,todaysDate))
+
+
+
+33.1.2. Problem 2
+def valley(l):
+	bol=0
+	count=0
+	for i in range(0,len(l)-1):
+		if l[i+1]==l[i]:
+			return False
+		elif l[i+1]<l[i] and bol==0:
+			count-1
+		elif l[i+1]>l[i] and bol == 0:
+			bol = 1
+		elif l[i+1]<l[i] and bol ==1:
+			return False
+	if bol==0 and count == 0:
+		return False
+	else:
+		return True
+
+lst=[int(x) for x in input("integers space separated: ").split()]
+print(valley(lst))
+
+
+33.1.3. Exercise Problem 3 Python Functions
+from collections import Counter
+def frequency (seq):
+	b = seq.copy()
+	a=Counter(b)
+	mini=9999
+	maxi=-9999
+	for i in set(b):
+		if a[i]<mini:
+			mini=a[i]
+		if a[i]>maxi:
+			maxi=a[i]
+	min_lis=[]
+	max_lis=[]
+	for i in set(b):
+		if a[i]==mini:
+			min_lis.append(i)
+		if a[i]==maxi:
+			max_lis.append(i)
+	return(sorted(min_lis),sorted(max_lis),mini,maxi)
+l1 = [int(x) for x in input("Please enter integers separated by spaces: ").split()]
+print (frequency(l1))
