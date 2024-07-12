@@ -1,0 +1,70 @@
+55.1.1. Method overriding - an overview
+(a) Method overloading is a feature that allows methods with multiple parameters.
+(b) Method overriding is a feature where we modify a behaviour of a method in the derived class that is already present in the base class.
+(c) This overriding feature happens only when we have a base class and derived class.
+
+
+
+55.1.2. Writing a simple overriding example
+class Car:
+	def setbrandname(self, brandname):
+		# Write your code 
+		self.brandname= brandname
+	def getbrandname(self):
+		# Write your code here
+		print(self.brandname)
+	def setmodel(self, model):
+		# Write your code here
+		self.model = model
+	def getmodel(self):
+		# Write your code here
+		print(self.model)
+class Accord(Car):
+	def setbrandname(self, brandname):
+		# Write your code here
+		self.brandname = brandname
+	def getbrandname(self):
+		# Write your code here
+		print(self.brandname)
+blueaccord = Accord() #instance of Accord
+# set the brand and model name by taking the input from the user
+blueaccord.setbrandname(input("brand: "))
+blueaccord.setmodel(input("model: "))
+#print the brand and model name using the get methods
+blueaccord.getbrandname()
+blueaccord.getmodel()
+
+
+
+
+55.1.3. Understanding Inheritance, Multiple Inheritance and Method Overriding
+#create an Animal class
+class Animal:
+	#define a method speak
+	def speak(self):
+		print("Animal makes a sound")
+
+#create a Bird class that inherits Animal class
+class Bird(Animal):
+	#define a method speak
+	def speak(self):
+		print("Bird sings")
+
+#create a Mammal class that inherits Animal class
+class Mammal(Bird):
+	#define a method speak
+	def speak(self):
+		print("Mammal roars")
+
+#input
+choice = input("Enter 'bird' to create a Bird or 'mammal' to create a Mammal: ")
+
+#write your logic here
+if choice == "bird":
+	s = Bird()
+	s.speak()
+elif choice == "mammal":
+	s = Mammal()
+	s.speak()
+else:
+	print("Invalid choice")
