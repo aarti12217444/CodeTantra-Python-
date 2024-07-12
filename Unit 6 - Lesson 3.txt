@@ -1,0 +1,67 @@
+59.1.1. Exception - An overview
+(a) Exception is an event which occurs to disrupt the flow of the given program.
+(b) Exception handling is a rich feature provided by Python language.
+(d) If the code executes without any error, the except block is skipped and control goes to the statement after the except block.
+
+59.1.2. Types of Exceptions and base exceptions
+(a) All exceptions should be instances of the derived class of the BaseException class.
+(b) In the except block, if the exception is handled, it means it can also handle all the exception types that are derived from this Exception class.
+(d) All built-in exceptions are derived from the Exception class.
+
+
+59.1.3. A simple try except example
+num1 = int(input("num1: "))
+num2 = int(input("num2: "))
+try:
+	# implement try block here
+	print(num1 / num2)
+except:
+	# implement except block here
+	print("exception occurred")
+
+
+59.1.4. Built-in Exceptions list.
+(a) The root exception class is the BaseException.
+(b) SystemExit, KeyboardInterrupt, GeneratorExit and Exception extend from the BaseException.
+(c) The Rest of the built-in classes are derived from The Exception class.
+
+
+59.1.5. Simple try except block example
+try:
+	num1 = int(input("num1: "))
+	num2 = int(input("num2: "))
+	# perform division operator
+	print(num1/num2)
+except ZeroDivisionError:
+	# print respective error
+	print("Error: Division by zero is not allowed")
+except ValueError:
+	# print respective error
+	print("Error: Invalid input. Please enter valid integers")
+
+
+59.1.6. Nested Try blocks and Exceptions
+TryAgain = True
+while TryAgain:
+	try:
+		Value = int(input("whole number: "))
+	except ValueError:
+		print("you must enter a whole number!")
+		try:  # Nested try block
+			
+			# Prompt to try again and handle responses here
+			inp = input("try again (y/n)? ")
+			if inp == "y" or inp == "Y":
+				TryAgain = True
+			else:
+				TryAgain = False
+		except:  # Nested exception block
+			print("ok, see you next time!")
+			TryAgain = False
+			# Check user's response and update TryAgain here
+	except KeyboardInterrupt:
+		# Handle keyboard interrupt here
+		TryAgain = False
+	else:
+		print(Value)
+		TryAgain = True

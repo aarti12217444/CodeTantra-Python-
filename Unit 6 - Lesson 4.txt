@@ -1,0 +1,15 @@
+60.1.1. Syntax Error
+(a) A error is generally a bug in the program usually caused by the developer who develops the code.
+(b) There are generally three types of errors.
+(c) Syntax errors are mistakes that happen if the programs that are written do not use the correct format of the language.
+
+
+60.1.2. Logical Errors
+(a) Logical Errors are the most difficult errors. (b) Programs that have Logical Errors get compiled and executed but give wrong results. (c) Logical Errors can be caused by the usage of the wrong variable name.
+
+
+60.1.3. RunTime Errors
+(a) A program may exit unexpectedly during execution if it encounters a runtime error.
+(b) A runtime error is a problem that was not detected when the program was parsed by the interpreter, but is only found out at a specific line execution.
+(c) When a program exits when a run time error occurs, we say the program crashed.
+(d) Division by zero is not a logical error.

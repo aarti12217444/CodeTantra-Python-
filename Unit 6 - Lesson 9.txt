@@ -1,0 +1,105 @@
+65.1.1. Packages overview
+(a) Packages can be thought as directories with some specific rules.
+(c) Each package should have a file called __init__.py
+
+
+
+65.1.2. Writing a simple package with two modules
+import Robots.Car # import Robots.Car and Robots.House using dot operator (.)
+import Robots.House
+
+Robots.Car.cleancar() # function cleancar is called form the Car modules
+
+# Call the checkcar() function from the Car module
+Robots.Car.checkcar()
+# Call the cleanhouse() function from the House module
+Robots.House.cleanhouse()
+# Call the payrent() function from the House module
+Robots.House.payrent()
+
+
+
+65.1.3. Writing an example to create a robot calculator by importing packages.
+---------------robot_calculator.py---------------
+
+# import Robots.MathRobot using dot operator (.)
+import Robots.MathRobot
+# Displaying the available operations
+print("Select an operation:")
+print("1. Addition")
+print("2. Subtraction")
+print("3. Multiplication")
+choice = input("choice (1/2/3): ")
+
+if choice == '1':
+	# call add_numbers function from the Robots.MathRobot module
+	Robots.MathRobot.add_numbers()
+elif choice == '2':
+	# call subtract_numbers function from the Robots.MathRobot module
+	Robots.MathRobot.subtract_numbers()
+
+elif choice == '3':
+	# call multiply_numbers function from the Robots.MathRobot module
+	Robots.MathRobot.multiply_numbers()
+	
+else:
+    print("Invalid choice")
+
+print("Goodbye!")
+
+
+---------------MathRobot.py---------------
+
+def add_numbers():
+	# take two inputs from the user
+	a = float(input("num1:"))
+	b = float(input("num2:"))
+	# calculate sum
+	# print the result
+	print("sum:",a+b)
+
+def subtract_numbers():
+	# take two inputs from the user
+	a = float(input("num1:"))
+	b = float(input("num2:"))
+	# calculate difference
+	# print the result
+	print("difference:",a-b)
+
+def multiply_numbers():
+	# take two inputs from the user
+	a = float(input("num1:"))
+	b = float(input("num2:"))
+	# multiply two numbers
+	# print the result
+	print("product:",a*b)
+
+
+
+
+65.1.4. Using the from keyword
+from Robots.Office import Office
+# Import Factory class from its respective module
+from Robots.Factory import Factory
+
+# Created instance of Office class
+if __name__ == "__main__":
+    office_robot = Office()
+    factory_robot = Factory()
+
+    # Called the methods on the office_robot instance
+    office_robot.cleanoffice()
+    office_robot.schedule_meetings()
+    # Call the methods on the factory_robot instance
+    factory_robot.assemble_products()
+    factory_robot.perform_quality_check()
+
+
+
+
+65.1.5. Using from and import
+# import Car2 from Robots
+import Robots.Car2
+# call the functions in the file Car2 here
+Robots.Car2.checkcar()
+Robots.Car2.cleancar()

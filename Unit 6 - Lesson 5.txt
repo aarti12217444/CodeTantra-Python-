@@ -1,0 +1,90 @@
+61.1.1. Try with many except blocks
+(a) A try block can have more than one except block, each block handling a type of Exception.
+(b) Based on the Exception/error that has been generated, the except block that is written to handle that exception is invoked.
+
+
+61.1.2. Multiple Exception Handling Example
+try:
+	# take user inputs a and b and perform arithmetic operations
+	a = int(input("a: "))
+	b = int(input("b: "))
+	if a == 0:
+		f = fun1(a)
+	a/b
+	print("try successful")
+	# Display success message	
+# Handle division by zero exception	
+except ZeroDivisionError:
+	# Display corresponding error
+	print("zero division error occurred")
+
+# Handle NameError exception
+except NameError:
+	# Display corresponding error
+	print("name error occurred")
+
+except Exception:
+	# Display corresponding exception
+	print("exception occurred")
+def fun1(n):
+	print(n)
+
+
+61.1.3. A try with multiple except blocks
+try:
+	# write your code
+	a = int(input("a: "))
+	b = int(input("b: "))
+	c = a+b
+	d = a/b
+	e = a*b
+	print("try successful")
+except ZeroDivisionError:
+	print("zero division error occurred")
+except ArithmeticError:
+	print("arithmetic error occurred")
+except Exception:
+	print("exception occurred")
+
+
+61.1.4. More on Exception Handling
+(a) It is good way of programming to write exception handling for a few lines of code.
+(b) An advantage of exception handling is it separates normal code and exception handling code.
+(c) Exceptions are passed from functions in the stack until they reach a function that knows how to handle them.
+
+
+61.2.1. Try - Finally block.
+(a) finally block will be executed whatever the outcome that happens in the try block.
+(b) finally block is written after all the except blocks.
+
+
+
+61.2.2. Writing an example to understand finally block
+try:
+	# write your code here
+	a = int(input("a: "))
+	b = int(input("b: "))
+	c = a+b
+	d = a/b
+	print("try successful")
+except ArithmeticError:
+	print('arithmetic error occurred ')
+except Exception:
+	print('exception occurred')
+finally:
+	print('executed in any condition')
+
+
+
+61.2.3. Using try finally block
+try:
+	a = int(input("a: "))
+	b = int(input("b: "))
+	c = a*b
+	d = a/b
+	print("try successful",c,d)
+except Exception:
+	print("exception occurred")
+
+finally:
+	print("executed in any condition")

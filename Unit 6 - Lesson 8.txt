@@ -1,0 +1,48 @@
+64.1.1. Using 'from' keyword along with import
+from Module_Imp3 import calculatearea, calculatediameter
+
+# Write your code here
+a = int(input("radius: "))
+b = int(input("side: "))
+calculatediameter(a)
+calculatearea(b)
+
+
+
+64.1.2. from and import with 'as' keyword
+# write your code here
+from Module_Imp3 import calculatearea as area
+from Module_Imp3 import calculatevolume as vol
+a = int(input("length: "))
+b = int(input("breadth: "))
+area(a,b)
+c = int(input("side: "))
+vol(c)
+
+
+
+
+64.1.3. Using asterisk(*) in from import
+# Write your code here
+from Module_Imp3 import *
+a = int(input("Celsius: "))
+celsius_to_fahrenheit(a)
+b = float(input("Fahrenheit: "))
+fahrenheit_to_celsius(b)
+
+
+
+64.1.4. Writing a program using 'from' keyword along with importing asterisk (*).
+# Import necessary functions from the Module_Imp3 module using *
+from Module_Imp3 import *
+
+score_input = input("Enter the scores separated by spaces: ")
+scores = [float(score) for score in score_input.split()]
+
+sum_scores = calculate_sum(scores)
+average_score = calculate_average(scores)
+final_grade = determine_grade(average_score)
+
+print(f"Sum of scores: {sum_scores:.2f}")
+print(f"Average score: {average_score:.2f}")
+print(f"Final grade: {final_grade}")

@@ -1,0 +1,72 @@
+62.1.1. Raising an exception
+def checkage(age):
+	if age < 0:
+		raise ValueError("age should be greater than or equal to zero")
+	print("age is valid")
+# write your code here
+try:
+	a = int(input("age: "))
+	checkage(a)
+except ValueError as e:
+	print(f"('{e}',)")
+finally:
+	print("executed in any condition")
+
+
+
+62.1.2. Writing a program of raising an exception
+try:
+	# write your code here
+	def checkage(a):
+		if a < 0:
+			raise ValueError("age should be greater than or equal to zero")
+	a = int(input("age: "))
+	checkage(a)
+except ValueError:
+	print("age should be greater than or equal to zero")
+finally:
+	print("i am always executed")
+
+
+
+
+62.2.1. User Defined Exceptions - An overview
+(a) Python supports a lot of in-built exceptions.
+(b) All user defined exceptions have to be derived from the Exception class.
+(c) Python built-in exceptions extend from the BaseException/Exception class.
+
+
+
+62.2.2. An user defined exception example
+class OurException(Exception):
+	# define constructor
+	def __init__(self,message):
+		self.message = message
+	
+class UsingUserException:
+	try:
+		a = int(input("a: "))
+		b = int(input("b: "))
+		#write code in try block
+		if b == 0:
+			raise OurException("b should be greater than 0")
+		d = a/b
+		print("division operation successful with result:",d)
+		
+	except OurException as err:
+		print("user defined exception:", err.message)
+
+
+
+
+62.2.3. Writing a user defined exception
+try:
+	a = int(input("a: "))
+	b = int(input("b: "))
+	def d(a,b):
+		if b==0:
+			raise ArithmeticError("b should be greater than 0")
+		return(a/b)
+	print("division operation successful with result:", d(a,b))
+except ArithmeticError as e:
+	print("user defined exception:",e)
