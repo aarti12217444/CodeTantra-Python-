@@ -1,0 +1,128 @@
+58.1.1. File Open statement
+(b) The mode argument tells how the file is to be opened, e.g. for reading only, for writing only etc.
+(d) If we do not specify any path, the file is assumed to be in the current directory
+
+
+58.1.2. Binary files Vs Text files
+(b) Student data containing name(string), age(integer), percentage (float) should be stored as a binary file
+(d) Binary data is read and written in bytes objects and cannot be printed directly
+
+
+58.1.3. Binary files Vs Text files
+(c) Write only with error if file is existing
+
+
+58.1.4. Different File Operations
+# Open the file for read
+fr = open('TextData.txt', 'r')
+# Open the file for write (new file)
+fw = open('NewFile.txt', 'w')
+# Read the file and copy it to the new file
+fw.write(fr.read())
+
+fr.close()		# Close the input file
+fw.close()		# Close the new file
+# Open the new file as read / write
+fr1 = open('NewFile.txt', 'r+')
+# read and print the first 12 characters
+print(fr1.read(12))
+# Print the cursor position
+print(fr1.tell())
+# Write some text of 20 characters at the end
+print(fr1.write("this is the new text"))
+# Position the cursor at 12
+print(fr1.seek(12))
+# Read and print the next character (at cursor position 12)
+print(fr1.read(1))
+# Position the cursor at 15
+print(fr1.seek(15))
+# Read and print 10 characters from this position
+print(fr1.read(10))
+# read() always reads the entire file irrespective of cursor position and changes the cursor position to the end
+print(fr1.read())
+fr1.close()		# Closing the file
+
+
+
+58.1.5. Understanding Binary Files
+#imports the pickle library
+import pickle
+Students = [['John', '501', 20, 92.5],
+			['Kohli', '502', 21, 95.5],
+			['Ganga','503', 20, 90.5],
+			['Gayathri','504', 20, 82.5],
+			['Krishna','505', 20, 96.5]]
+# Open the output file with binary format
+fst = open("students.dat",'wb')
+for student in Students:
+		pickle.dump(student,fst)	#Fill the missing code to write the details of each student
+
+#Closing the output filr
+fst.close()
+
+#Opening the file as input binary
+fst = open("students.dat",'rb')
+
+#Fill the missing code to read the file record
+data = pickle.load(fst)
+
+#The Endof file is indicated as EOFError exception, we need to catch this exception
+try:
+	while(True): 
+		print(data)
+		data = pickle.load(fst)
+except:
+	print("Bye")
+
+
+
+58.1.6. print each line of a file in reverse order.
+#take the input file name
+i = input("Enter file name: ")
+#open the file in read only mode
+fin = open(i,"r")
+# Iterate over the lines and print them in reverse order
+for i in range(7):
+	a = fin.readline()
+	print(a.strip()[::-1])
+
+#close the file
+fin.close()
+
+
+
+58.1.7. Print the number of lines, words, and characters in a file.
+#take the input file name
+i = input("Enter file name: ")
+#open the file in read only mode
+fin = open(i, "r")
+
+charCount = wordCount = lineCount = 0
+for line in fin:	#Read each Line
+	lineCount += 1
+	# write your logic here
+	wordCount += len(line.split(' '))
+	charCount += len(line)
+
+print("Line count =", lineCount)  #Print the Counts
+print("Word count =", wordCount)
+print("Char count =", charCount)
+
+#close the file
+fin.close()
+
+
+
+58.1.8. Copy contents of one file to another file
+file = input("Enter file name: ")
+fin = open(file, 'r')
+fout = open('OutputData3.txt',"w")
+
+#write your code here..
+fout.write(fin.read())
+fin.close()
+fout.close()
+
+fin2  = open('OutputData3.txt','r')
+print(fin2.read())
+fin2.close()

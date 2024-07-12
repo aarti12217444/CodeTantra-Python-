@@ -1,0 +1,17 @@
+57.1.1. Understanding File Name and File Path
+(b) File are stored on external media
+
+
+57.1.2. Understanding File Name and File Path
+(d) File extension tells the type of file
+
+
+57.1.3. Understanding File Name and File Path
+(a) File path indicates the directory in which the file is located
+(b) In the string "c:\users\ravi\desktop\documents\profile.doc", doc is the extension
+(c) We can specify the file path relative to the current directory
+(d) When the file is in the current directory, the file path need not be specified
+
+
+57.1.4. Understanding File Name and File Path
+(a) File name and file path
