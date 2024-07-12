@@ -1,0 +1,5 @@
+67.1.1. Introduction to web scrapping
+(a) Using socket programming we can retrieve web pages by posting HTTP requests to the remote web server, This is one way of web scraping.
+(b) Regex in python can be used to extract information from the web as per our requirement
+(c) Its little complex but for small set of data we can manually scrap the data from the web using copy paste technique, and we can store this data in text files or spreadsheets for future analysis.
+(d) We can use some semi-structured data query languages like XQuery and the HTQL to parse HTML pages to retrieve and transform web pages information.
