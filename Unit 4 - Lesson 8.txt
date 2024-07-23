@@ -1,16 +1,21 @@
 41.1.1. Understanding the Built-in Tuple Functions
->
 (a) enumerate() method starts an index from 0.
 (b) any(' ', ' ', ' ', '?') returns True as output.
+
+
 41.1.2. Understanding the Built-in Tuple Functions
 (b) tuple("hello") returns the output as ('h', 'e', 'l', 'l', 'o')
 (c) print(min(("P", "y", "t", "h", "o", "n", " "))) will return the output as ' '
+
+
 41.1.3. Write a Program to Count number of elements in a Tuple
 data = input("data: ")
 list1 = data.split(",")
 t = tuple(list1)
 #convert the input list to tuple and find the length
 print("length:",len(t))
+
+
 41.1.4. Write a Program to find how many times a given Element occured in Tuple
 #write your code here
 d = input("data: ").split(",")
@@ -21,20 +26,28 @@ for i in d:
 	if i == e:
 		c += 1
 print("occurrence:",c)
+
+
 41.1.5. Write a Program to Find Sum of Tuple Elements
 
 #write your code here
 d = tuple(map(int,input("data: ").split(",")))
 print("tuple:",d)
 print("sum:", sum(d))
+
+
 41.1.6. Maximum Element in a Tuple
 #write your code here
 i = tuple(map(int,input("data: ").split(",")))
 print("max:",max(i))
+
+
 41.1.7. Write a Program to Find Minimum Element of a Tuple
 #write your code here
 i = tuple(map(int,input("data: ").split(",")))
 print("min:",min(i))
+
+
 41.1.8. Write a Program to Find an Index of user given Element
 #write your code here
 d = tuple(input("data: ").split(","))
