@@ -1,13 +1,19 @@
 42.1.1. Introduction to Dictionaries
 (c) A dictionary is a collection of unordered elements and each element will in the form a key: value pair.
 (e) The dict() function is used to construct a dictionary.
+
+
 42.1.2. Overview of Operations
 (c) A value in a dictionary can be updated using the indexing operator along with the key.
 (d) A for loop can be used to iterate through the elements of a dictionary.
+
+
 42.2.1. Understand conversion of lists into a dictionary
 (a) In Python 3 zip() function returns an iterator of tuples true or false?
 (b) If there are no arguments, zip() function returns an empty outcome.
 (d) sorted(dict.items()) function prints the arguments in sorted order.
+
+
 42.2.2. Understand conversion of lists into dictionary
 data1 = input("data1: ")
 data2 = input("data2: ")
@@ -20,6 +26,9 @@ print("list2:", list2 )
 mydict = dict(zip(list1,list2))
 #print the sorted dictionary
 print("dictionary:",  sorted(mydict.items()))
+
+
+
 42.2.3. Write a program to create a Dictionary using two Lists
 #write your code here
 d1 = input("data1: ").split(",")
@@ -29,6 +38,8 @@ if len(d1) == len(d2):
 	print(sorted(t.items()))
 else:
 	print("length should be equal")
+
+
 42.2.4. Accessing elements in Dictionary
 data1 = input("data1: ")
 data2 = input("data2: ")
@@ -43,6 +54,9 @@ if key in mydict:
 	print("value:",mydict[key])
 else:
 	print("value: None")
+
+
+
 42.2.5. Membership Test in a Dictionary
 #write your code here
 d1 = input("data1: ").split(",")
@@ -53,6 +67,9 @@ if k in d:
 	print(True)
 else:
 	print(False)
+
+
+
 42.2.6. Iteration in dictionary
 data1 = input("data1: ")
 data2 = input("data2: ")
@@ -63,6 +80,8 @@ dict1 = dict(zip(list1,list2))
 #complete the code to iterate over all the elements and print
 for key, value in sorted(dict1.items()):
 	print(key,value)
+
+
 42.2.7. Write a program to print elements of a dictionary using 'for clause'
 
 #write your code here
@@ -71,6 +90,8 @@ d2 = input("data2: ").split(",")
 d = dict(zip(d1,d2))
 for key,value in sorted(d.items()):
 	print(f"{key} -> {value}")
+
+
 42.2.8. Delete or Remove Elements from a Dictionary
 data1 = input("data1: ")
 data2 = input("data2: ")
@@ -87,6 +108,9 @@ if key in dict1:
 	print("dictionary:", sorted_dict)
 else:
 	print("key does not exist")
+
+
+
 42.2.9. Write a program to find value of a dictionary which are maximum and minimum using list methods min() and max()
 data1 = input("data1: ")
 data2 = input("data2: ")
@@ -96,6 +120,8 @@ dict1 = dict(zip(list1, list2))
 #write your code here
 print("max:",max(dict1.values()))
 print("min:", min(dict1.values()))
+
+
 42.2.10. Changing Existing Value of Key with user given Value in Dictionary
 #write your code here
 d1 = input("data1: ").split(",")
