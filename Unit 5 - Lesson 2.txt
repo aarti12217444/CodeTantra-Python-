@@ -11,6 +11,8 @@ department = input("department: ")
 salary = int(input("salary: "))
 manager_1 = Manager(name, department, salary)
 print('Manager details:', manager_1.name, manager_1.department, manager_1.salary)
+
+
 51.1.2. Using self variable
 class Car:
 	def setDetails(self, model, regno):
@@ -41,6 +43,8 @@ Maruthi.r = Maruthi.getRegno()
 
 print("Hyundai car details:", Hyundai.m,Hyundai.r)
 print("Maruthi car details:", Maruthi.m,Maruthi.r)
+
+
 51.1.3. Writing a class using a self variable as method parameter
 
 # write your code here
