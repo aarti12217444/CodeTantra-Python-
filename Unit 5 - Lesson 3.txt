@@ -2,6 +2,9 @@
 (a) A constructor can be viewed as a specific method used by the class to perform tasks such as initialising variables, or any start up task.
 (b) In Java language, the constructor has the same name as the class with no return type defined.
 (d) A constructor in Python in any class is defined as __init__(self) method.
+
+
+
 52.1.2. Writing a class using __init__ method
 class Student:
 
@@ -21,6 +24,9 @@ Stud_2 = Student(name,age)
 
 print('Stud_1.name:', Stud_1.name)
 print('Stud_2.name:', Stud_2.name)
+
+
+
 52.1.3. Using the init method in the class
 class Student:
 #fill in the missing code..	
@@ -38,6 +44,9 @@ age = int(input("age: "))
 email = input("email: ")
 s1 = Student(name, age, email)
 s1.studentDetails()
+
+
+
 52.1.4. Write a program to print name and salary of an Employee and print total salary of all Employees.
 class Employee:
 	def __init__(self, name, salary):
